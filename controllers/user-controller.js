@@ -30,7 +30,7 @@ export const signup = async (req, res, next) => {
         if(existingUser) return res.status(400).json({messege: "User already exists"})
         if(password !== confirmPassword) return res.status(400).json({messege: "Passwords don't match"})
 
-        const newUser = User.create({
+        const newUser = await User.create({
             name: `${firstName} ${lastName}`,
             password: await bcrypt.hash(password, 10),
             email

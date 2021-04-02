@@ -29,4 +29,4 @@ mongoose.set('useFindAndModify', false)
 import postRoutes from './routes/post.js'
 import userRoutes from "./routes/user.js"
 app.use('/posts', postRoutes)
-app.use("/user", userRoutes)
+app.use("/users", userRoutes)

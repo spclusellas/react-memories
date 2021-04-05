@@ -64,11 +64,11 @@ export const likePost = async (req, res, next) => {
 
     if(index === -1){
        post.likes.push(req.userId)
+       console.log(post.likes)
        console.log('poniendo')
     } else {
-        console.log(req.userId)
        post.likes = post.likes.filter(id => id !== String(req.userId))
-       console.log(post)
+       console.log(post.likes)
        console.log('sacando')
     }
 
